@@ -11,7 +11,6 @@ data = requests.get(f'https://api.github.com/users/{REPO_NAME}/repos')
 
 if data.ok:
     with open('lesson_1.json', 'w', encoding='utf-8') as f:
-        # f.write(json.dumps(data.json(), ensure_ascii=False, indent=4))
         json.dump(data.json(), f, ensure_ascii=False, indent=4)
 
     print('Repository list saved')
