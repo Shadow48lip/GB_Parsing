@@ -8,7 +8,6 @@ import json
 REPO_NAME = 'Shadow48lip'
 
 data = requests.get(f'https://api.github.com/users/{REPO_NAME}/repos')
-# print(type(json.dump(data.json())))
 
 if data.ok:
     with open('lesson_1.json', 'w', encoding='utf-8') as f:
